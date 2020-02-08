@@ -11,6 +11,7 @@ const forecast = require('./utils/forecast')
 
 const app = express()
 const publicDirectoryPath = path.join(__dirname, '../public')
+const port = process.env.PORT || 3000
 
 //hbs default folder name is views but if you want to customise the name of the folder you can do that by
 
@@ -139,6 +140,6 @@ app.get('*',(req, res) => {
 
 
 //to start the server,   3000 is the port number
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server is up on port 3000.')
 })
